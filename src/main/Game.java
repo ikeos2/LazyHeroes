@@ -7,8 +7,8 @@ public class Game {
 	
 	public static void main(String[] args) {
 		
-		Hero Good = new Hero("Dudley Do Right", 10, 5, 10);
-		Hero Villian = new Hero("Wrongly Not Correct", 7, 5, 20);
+		Hero Good = new Warrior("Dudley Do Right", 10, 5, 10);
+		Hero Villian = new Warrior("Wrongly Not Correct", 7, 5, 20);
 		
 		Battle(Good, Villian);
 	}

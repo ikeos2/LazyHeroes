@@ -1,7 +1,6 @@
 package main;
 
-public class Warrior {
-	static final int speedMax = 100;
+public class Warrior implements Hero{
 	
 	private String name;
 	private int speed, attack, defense;
