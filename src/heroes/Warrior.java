@@ -1,4 +1,4 @@
-package main;
+package heroes;
 
 public class Warrior implements Hero{
 	

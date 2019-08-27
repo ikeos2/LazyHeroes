@@ -1,4 +1,4 @@
-package main;
+package heroes;
 
 public interface Hero {
 	static final int speedMax = 100;

@@ -1,5 +1,8 @@
 package main;
 
+import heroes.Hero;
+import heroes.Warrior;
+
 public class Game {
 
 	public final static boolean OUTPUT = true;
