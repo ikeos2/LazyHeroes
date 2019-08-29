@@ -10,8 +10,8 @@ public class Game {
 	
 	public static void main(String[] args) {
 		
-		Hero Good = new Warrior("Dudley Do Right", 10, 5, 10);
-		Hero Villian = new Warrior("Wrongly Not Correct", 7, 5, 20);
+		Hero Good = new Warrior("Dudley Do Right", 100, 10, 5, 10);
+		Hero Villian = new Warrior("Wrongly Not Correct", 125, 7, 5, 20);
 		
 		Battle(Good, Villian);
 	}
@@ -21,8 +21,8 @@ public class Game {
 		while(true) {			
 
 			if(STATS) { 
-				String a_block = A.getName() + ": " +  A.getHealth() + "/100";
-				String b_block = B.getName() + ": " +  B.getHealth() + "/100";
+				String a_block = A.getName() + ": " +  A.getCurrentHealth() + "/" + A.getMaxHealth();
+				String b_block = B.getName() + ": " +  B.getCurrentHealth() + "/" + B.getMaxHealth();
 				System.out.println(a_block + "\n" + b_block); 
 			}
 		
@@ -36,12 +36,14 @@ public class Game {
 			}
 			
 			if(A.turn()) {
-				if(OUTPUT) { System.out.println(A.getName() + " attacks " + B.getName()); }
-				B.take_damage(A.attack());
+				int damage = A.attack();
+				if(OUTPUT) { System.out.println(A.getName() + " attacks " + B.getName() + " for " + damage); }
+				B.take_damage(damage);
 			}
 			if(B.turn()) {
-				if(OUTPUT) { System.out.println(B.getName() + " attacks " + A.getName()); }
-				A.take_damage(B.attack());
+				int damage = B.attack();
+				if(OUTPUT) { System.out.println(B.getName() + " attacks " + A.getName() + " for " + damage); }
+				A.take_damage(damage);
 			}
 		}
 	}

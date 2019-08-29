@@ -18,7 +18,13 @@ public interface Hero {
 	 * The current amount of health a hero has
 	 * @return The current amount of health a hero has
 	 */
-	public int getHealth();
+	public int getCurrentHealth();
+	
+	/**
+	 * The maximum amount of health this hero can have
+	 * @return hero's max health stat
+	 */
+	public int getMaxHealth();
 	
 	/**
 	 * When called, this hero should calculate what attack it will make against
@@ -28,9 +34,9 @@ public interface Hero {
 	public int attack();
 	
 	/**
-	 * Given the amount of damage, calculate how much this character should receive
+	 * Given the amount of damage, calculate how much this character should have applied
 	 * based on *whatever*. Default is HP -= damage - defense, with a floor of 0.
-	 * @param damage
+	 * @param damage amount of damage hero is receiving
 	 */
 	public void take_damage(int damage);
 	

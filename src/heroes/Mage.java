@@ -21,7 +21,13 @@ public class Mage implements Hero {
 	}
 
 	@Override
-	public int getHealth() {
+	public int getCurrentHealth() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getMaxHealth() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
