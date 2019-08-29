@@ -1,6 +1,6 @@
 package heroes;
 
-public class Mage implements Hero {
+public class Mage extends Hero {
 
 	@Override
 	public String getName() {

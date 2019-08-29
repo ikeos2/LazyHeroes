@@ -2,7 +2,7 @@ package heroes;
 
 import java.util.Random;
 
-public class Warrior implements Hero{
+public class Warrior extends Hero{
 	
 	private String name;
 	private int speed, attack, defense;
